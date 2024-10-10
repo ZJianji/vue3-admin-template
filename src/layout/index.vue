@@ -38,7 +38,7 @@ const cacheList = ref([])
 .layout-contianer {
 
   .layout-left {
-    // transition: all .3s;
+    transition: all .3s;
   }
 
   .layout-main {
