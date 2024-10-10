@@ -1,0 +1,1 @@
+import{o as t,a as o,h as c,ag as a}from"./.pnpm-DeAMUJ_Q.js";import{_ as s}from"./index-DlcL_LV4.js";const n={},r={class:"menu-2"};function _(l,f){const e=a;return t(),o("div",r,[c(e,{closable:!1,title:"菜单 2-2",type:"info",effect:"dark"})])}const d=s(n,[["render",_]]);export{d as default};
