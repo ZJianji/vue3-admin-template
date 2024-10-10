@@ -13,6 +13,7 @@ import { createSvg } from './src/icons/index'
 export default ({ mode }) => {
   const { VITE_BASE_NAME } = loadEnv(mode, process.cwd())
   return defineConfig({
+    base: '/vue3-admin-template/',
     plugins: [
       vue(),
       createSvg('./src/icons/svg/'),

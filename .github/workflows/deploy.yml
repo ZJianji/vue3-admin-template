@@ -1,0 +1,32 @@
+name: vue3-admin-template
+
+on:
+  push:
+    branches:
+      - master # 更改为你的主分支名称
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 获取所有历史记录
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # 选择合适的 Node.js 版本
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Vue App
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.3.0
+        with:
+          branch: gh-pages # 如果你想部署到 https://username.github.io/repo-name/gh-pages
+          folder: dist # 包含静态文件的文件夹
