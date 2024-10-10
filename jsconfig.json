@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": ["element-plus/global", "element-plus-crx/global"]
-  },
-  "exclude": ["node_modules", "dist"]
-}
