@@ -90,9 +90,20 @@ export default ({ mode }) => {
           manualChunks(id) {
             // 静态资源分拆打包
 
-            if (id.includes('node_modules')) {
-              return id.toString().split('node_modules/')[1].split('/')[0].toString()
+            // if (id.includes('node_modules')) {
+            //   return id.toString().split('node_modules/')[1].split('/')[0].toString()
+            // }
+
+            // 静态资源分拆打包
+            const moduleName = id.toString().split('node_modules/')[1];
+            if (!moduleName) return;
+
+            // 防止生成 .pnpm 命名的文件
+            const parts = moduleName.split('/');
+            if (parts.length > 1) {
+              return parts[1]; // 返回一级目录下的模块名，而不是 .pnpm 下的目录
             }
+            return moduleName; // 返回模块名
           },
         },
       },

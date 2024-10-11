@@ -1,1 +1,0 @@
-import{_ as e}from"./index-DlcL_LV4.js";import{o,a as c}from"./.pnpm-DeAMUJ_Q.js";const t={},n={class:"home-container"};function r(s,a){return o(),c("div",n," 首页 ")}const f=e(t,[["render",r],["__scopeId","data-v-5f11784c"]]);export{f as default};
