@@ -15,27 +15,33 @@ export const menuRoute = [
     path: '/elementPlusCrx',
     name: 'elementPlusCrx',
     redirect: '/table',
-    meta: { title: 'ElementPlusCrx', icon: 'example' },
+    meta: { title: 'elementPlusCrx', icon: 'example' },
     children: [
       {
         path: '/table',
         name: 'table',
         meta: { title: '表格' },
-        component: () => import('@/views/ElementPlusCrx/table/index.vue')
+        component: () => import('@/views/elementPlusCrx/table/index.vue')
       },
       {
         path: '/form',
         name: 'form',
         meta: { title: '表单' },
-        component: () => import('@/views/ElementPlusCrx/form/index.vue')
+        component: () => import('@/views/elementPlusCrx/form/index.vue')
       },
     ]
   },
   {
     path: '/onlinePreview',
     name: 'onlinePreview',
-    meta: { title: '在线预览', icon: 'houses' },
+    meta: { title: '在线预览', icon: 'example' },
     component: () => import('@/views/onlinePreview/index.vue'),
+  },
+  {
+    path: '/flowChart',
+    name: 'flowChart',
+    meta: { title: '流程图', icon: 'example' },
+    component: () => import('@/views/flowChart/index.vue'),
   },
   {
     path: '/nested',
